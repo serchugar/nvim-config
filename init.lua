@@ -1,3 +1,3 @@
 require("config.settings")
-require("config.lazy")
 require("sergio.mappings")
+require("config.lazy")

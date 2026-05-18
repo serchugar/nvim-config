@@ -12,7 +12,13 @@ vim.keymap.del({ "n", "t" }, "<c-_>")
 vim.keymap.set({ "n", "t" }, "<A-i>", function()
   Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })
-
 vim.keymap.set({ "n", "t" }, "<A-I>", function()
   Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
+
+-- Map yazi nvim
+vim.keymap.set({ "n", "v" }, "<leader>e", "<cmd>Yazi<cr>")
+vim.keymap.set({ "n", "v" }, "<leader>E", "<cmd>Yazi cwd<cr>")
+vim.keymap.set({ "n", "v" }, "<C-n>", function()
+  Snacks.explorer()
+end, { desc = "Open Snacks Explorer" })

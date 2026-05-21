@@ -21,9 +21,11 @@ return {
           },
           ignore = {
             "ANN401", -- Allow 'Any' for complex types (useful in deep learning)
+            "N806", -- Allow uppercase variables in functions (e.g., constants like DEVICE)
+            "N812", -- Allow lowercase import aliases to be uppercase (e.g., 'import ... as F')
           },
           isort = {
-            linesAfterImports = 2,
+            linesAfterImports = 2, -- Does not work, to achieve this one must use a ruff.toml in ~/.config/ruff/
             combineAsImports = true,
           },
         },
